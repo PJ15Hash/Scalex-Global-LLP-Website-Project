@@ -1,187 +1,94 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Scalex Global LLP — Water Treatment Solutions</title>
-  
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Scalex Global LLP - Water treatment & scaling solutions. Based in Basavanagudi, Bengaluru.">
-<meta name="theme-color" content="#0ea5a4">
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-<script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scalex Global LLP — Water Treatment & Scaling Solutions</title>
+  <meta name="description" content="Scalex Global LLP provides water treatment and scaling solutions in Bengaluru, India.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="antialiased text-slate-800">
-
-<header class="fixed w-full bg-white/90 backdrop-blur z-50 border-b">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center text-white font-bold">S</div>
-        <span class="font-semibold text-lg text-slate-800">Scalex Global LLP</span>
-      </a>
-      <nav class="hidden md:flex items-center space-x-6">
-        <a href="index.html" class="text-slate-700 hover:text-blue-600">Home</a>
-        <a href="about.html" class="text-slate-700 hover:text-blue-600">About</a>
-        <a href="services.html" class="text-slate-700 hover:text-blue-600">Services</a>
-        <a href="projects.html" class="text-slate-700 hover:text-blue-600">Solutions</a>
-        <a href="contact.html" class="text-slate-700 hover:text-blue-600">Contact</a>
-      </nav>
-      <div class="md:hidden">
-        <button id="menuBtn" aria-label="menu" class="p-2">
-          <svg id="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
-          <svg id="menuClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="mobileNav" class="md:hidden hidden border-t bg-white">
-    <div class="px-4 py-3 space-y-2">
-      <a href="index.html" class="block text-slate-700">Home</a>
-      <a href="about.html" class="block text-slate-700">About</a>
-      <a href="services.html" class="block text-slate-700">Services</a>
-      <a href="projects.html" class="block text-slate-700">Solutions</a>
-      <a href="contact.html" class="block text-slate-700">Contact</a>
-    </div>
-  </div>
-</header>
-<script>
-document.getElementById('menuBtn')?.addEventListener('click', function(){
-  const mobile = document.getElementById('mobileNav');
-  const open = document.getElementById('menuOpen');
-  const close = document.getElementById('menuClose');
-  if(mobile.classList.contains('hidden')){
-    mobile.classList.remove('hidden');
-    open.classList.add('hidden'); close.classList.remove('hidden');
-  } else {
-    mobile.classList.add('hidden');
-    open.classList.remove('hidden'); close.classList.add('hidden');
-  }
-});
-</script>
-
-<main class="pt-20">
-  <section class="relative bg-gradient-to-b from-sky-50 via-white to-white">
-    <div class="absolute inset-0 overflow-hidden -z-10">
-      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=60" alt="" class="w-full h-full object-cover opacity-30">
-    </div>
-    <div class="max-w-6xl mx-auto px-4 py-28">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Scalex Global home">
+        <div class="logo" aria-hidden="true">S</div>
         <div>
-          <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">Innovating Water Treatment & Scaling Solutions</h1>
-          <p class="mt-4 text-slate-700 max-w-xl">Scalex Global LLP designs and delivers sustainable, efficient water treatment systems for industries, communities and infrastructure projects. We blend engineering with environmental responsibility.</p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="services.html" class="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg shadow hover:bg-blue-700">Our Services</a>
-            <a href="contact.html" class="inline-block border border-slate-300 px-5 py-3 rounded-lg">Contact Us</a>
-          </div>
-          <div class="mt-8 grid grid-cols-2 gap-4">
-            <div class="p-4 bg-white/80 rounded-lg shadow">
-              <h4 class="font-semibold text-slate-900">Expertise</h4>
-              <p class="text-sm text-slate-600">Design · Implementation · O&M</p>
-            </div>
-            <div class="p-4 bg-white/80 rounded-lg shadow">
-              <h4 class="font-semibold text-slate-900">Sustainability</h4>
-              <p class="text-sm text-slate-600">Water conservation & eco-friendly systems</p>
-            </div>
-          </div>
+          <div style="font-weight:700">Scalex Global LLP</div>
+          <div style="font-size:12px;color:var(--muted)">Water Treatment & Scaling Solutions</div>
         </div>
-        <div class="rounded-xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1582719478250-7e1f9be0c50f?auto=format&fit=crop&w=1200&q=60" alt="Water treatment" class="w-full h-full object-cover">
-        </div>
-      </div>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="cta">Get a Quote</a>
+      </nav>
+
+      <button id="hamburgerBtn" class="hamburger" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
-  </section>
 
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-2xl font-bold text-blue-700 text-center">What We Do</h2>
-    <p class="text-center text-slate-600 mt-2">Integrated water treatment solutions — from concept to long-term operation.</p>
-    <div class="mt-8 grid gap-8 md:grid-cols-3">
-      <article class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold">Plant Design</h3>
-        <p class="mt-2 text-sm text-slate-600">Tailored plant designs to match capacity, water quality and budget requirements.</p>
-      </article>
-      <article class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold">Operation & Maintenance</h3>
-        <p class="mt-2 text-sm text-slate-600">Comprehensive O&M services to ensure uptime and regulatory compliance.</p>
-      </article>
-      <article class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold">Consultancy & Scaling Solutions</h3>
-        <p class="mt-2 text-sm text-slate-600">Process optimization, scale control and lifecycle planning.</p>
-      </article>
+    <div id="mobileNav" class="mobile-nav" role="dialog" aria-modal="false" aria-label="Mobile menu">
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="solutions.html">Solutions</a><br>
+      <a href="contact.html">Contact</a><br>
+      <a href="contact.html" class="cta" style="display:inline-block;margin-top:12px">Get a Quote</a>
     </div>
-  </section>
+  </header>
 
-  <section class="bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-2xl font-bold text-blue-700 text-center">Our Workflow</h2>
-      <div class="mt-8 flex flex-col md:flex-row gap-6 items-stretch">
-        <div class="flex-1 p-6 bg-white rounded-xl shadow text-center">
-          <h4 class="font-semibold">Plan</h4>
-          <p class="text-sm text-slate-600 mt-2">Site assessment & requirement analysis</p>
+  <main id="main" role="main">
+    <section class="container hero section" aria-labelledby="hero-heading">
+      <div class="hero-card">
+        <h1 id="hero-heading">Transforming Water for a Sustainable Future</h1>
+        <p class="lead">Scalex Global LLP provides industry-focused water treatment and scaling solutions. We combine engineering expertise with sustainable practices to deliver plant design, scale removal and long-term operation support.</p>
+        <div class="actions">
+          <a href="solutions.html" class="cta">Our Solutions</a>
+          <a href="contact.html" class="navlink" style="padding:10px;border-radius:10px;border:1px solid rgba(2,6,23,0.06)">Contact Us</a>
         </div>
-        <div class="flex-1 p-6 bg-white rounded-xl shadow text-center">
-          <h4 class="font-semibold">Design</h4>
-          <p class="text-sm text-slate-600 mt-2">Engineering & scalable solutions</p>
-        </div>
-        <div class="flex-1 p-6 bg-white rounded-xl shadow text-center">
-          <h4 class="font-semibold">Implement</h4>
-          <p class="text-sm text-slate-600 mt-2">Installation & commissioning</p>
-        </div>
-        <div class="flex-1 p-6 bg-white rounded-xl shadow text-center">
-          <h4 class="font-semibold">Maintain</h4>
-          <p class="text-sm text-slate-600 mt-2">Monitoring & lifecycle support</p>
+
+        <div class="feature-grid" role="list" aria-label="Key capabilities">
+          <article class="feature" role="listitem"><h4>Plant Design</h4><p>Tailored water treatment plant designs for industrial & community needs.</p></article>
+          <article class="feature" role="listitem"><h4>Scale Removers</h4><p>Chemical and mechanical descaling to restore equipment efficiency.</p></article>
+          <article class="feature" role="listitem"><h4>Operation & Support</h4><p>Ongoing maintenance and lifecycle monitoring for reliable performance.</p></article>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h3 class="text-2xl font-bold text-blue-700">Why Choose Us</h3>
-        <ul class="mt-4 space-y-2 text-slate-600">
-          <li>Industry-focused solutions</li>
-          <li>Cost-effective and scalable systems</li>
-          <li>Local presence in Bengaluru</li>
-        </ul>
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1582719478250-7e1f9be0c50f?auto=format&fit=crop&w=1200&q=80" alt="Water treatment plant equipment">
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1581091012184-7b2a0b3d3df0?auto=format&fit=crop&w=1200&q=60" alt="why choose us" class="rounded-xl shadow">
+    </section>
+
+    <section class="container section" aria-labelledby="why-heading">
+      <header class="center"><h2 id="why-heading">Why Scalex Global LLP</h2><p class="lead">Engineering-led solutions for water sustainability and scale control.</p></header>
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px">
+        <div class="card"><h4>Local Expertise</h4><p class="lead">Bengaluru-based team providing fast on-site support.</p></div>
+        <div class="card"><h4>Cost-effective</h4><p class="lead">Designs focused on lifecycle cost and operational savings.</p></div>
+        <div class="card"><h4>Fit-for-purpose</h4><p class="lead">Custom project designs for specific scaling challenges.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="bg-gradient-to-b from-white to-sky-50">
-    <div class="max-w-4xl mx-auto px-4 py-12 text-center rounded-xl">
-      <h3 class="text-xl font-semibold">Ready to start your water project?</h3>
-      <p class="text-slate-600 mt-2">Contact us for a consultation and project quote.</p>
-      <div class="mt-4">
-        <a href="contact.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Get in touch</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-<footer class="bg-slate-900 text-slate-200 mt-24">
-  <div class="max-w-6xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
-      <div>
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center text-white font-bold">S</div>
-          <span class="font-semibold">Scalex Global LLP</span>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>Scalex Global LLP</strong><br>
+          Basavanagudi, Bengaluru, Karnataka, India
         </div>
-        <p class="text-sm text-slate-400 max-w-md">Water treatment and scaling solutions startup based in Basavanagudi, Bengaluru. Delivering sustainable water management systems for industries and communities.</p>
+        <div class="center">
+          <a href="mailto:info@scalexglobal.com" class="cta" style="display:inline-block">info@scalexglobal.com</a>
+        </div>
       </div>
-      <div class="text-sm text-slate-400">
-        <p>Basavanagudi, Bengaluru, Karnataka, India</p>
-        <p class="mt-2">Email: info@scalexglobal.com</p>
-      </div>
+      <small class="center">© 2025 Scalex Global LLP. All rights reserved.</small>
     </div>
-    <div class="mt-6 text-center text-xs text-slate-500">&copy; 2025 Scalex Global LLP. All rights reserved.</div>
-  </div>
-</footer>
+  </footer>
 
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
