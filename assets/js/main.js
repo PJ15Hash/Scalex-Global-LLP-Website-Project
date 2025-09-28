@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', function(){const btn=document.getElementById('hamburgerBtn');const mobile=document.getElementById('mobileNav');btn&&btn.addEventListener('click',()=>mobile.classList.toggle('show'));document.addEventListener('keydown',function(e){if(e.key==='Escape'){mobile&&mobile.classList.remove('show');}});});
