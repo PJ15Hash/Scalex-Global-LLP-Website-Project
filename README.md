@@ -1,2 +1,2 @@
-# Scalex Global LLP — Home & About
-Modern corporate theme with Wix content inserted.
+# Scalex Global LLP — Production-ready static site
+Replace the Formspree endpoint in contact.html before using the contact form.
