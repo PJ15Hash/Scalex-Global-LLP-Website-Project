@@ -1,199 +1,162 @@
-/* =========================================================
-   Scalex Global LLP - Corporate Website Stylesheet
-   Author: Your Team
-   Version: 1.0
-   Description: Modern responsive theme for business website
-   ========================================================= */
+/* assets/css/style.css
+   Modern gradient style with glass cards and responsive layout.
+   Uses Poppins font (loaded in the HTML).
+*/
 
-/* ------------------------------
-   CSS Variables (Theme Colors)
-   ------------------------------ */
-:root {
-  --primary-color: #004aad;   /* Corporate blue */
-  --secondary-color: #f1c40f; /* Accent yellow */
-  --text-color: #333;
-  --bg-light: #f9f9f9;
-  --white: #fff;
-  --max-width: 1200px;
-  --transition: all 0.3s ease;
-  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root{
+  --bg-100: #0f1724;
+  --text-100: #e9eef8;
+  --muted: #b6c2d6;
+
+  --grad-a: #6e8efb;   /* purple-blue */
+  --grad-b: #2dd4bf;   /* teal */
+  --glass: rgba(255,255,255,0.06);
+  --glass-2: rgba(255,255,255,0.03);
+
+  --radius-lg: 14px;
+  --container: 1100px;
+  --gap: 1.25rem;
+  --accent: linear-gradient(135deg, var(--grad-a), var(--grad-b));
 }
 
-/* ------------------------------
-   Global Reset
-   ------------------------------ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--text-color);
-  line-height: 1.6;
-  background: var(--white);
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background: linear-gradient(180deg,#071024 0%, #061226 50%) fixed;
+  color:var(--text-100);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  overflow-x:hidden;
 }
 
 /* Utility container */
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1rem;
+.container{
+  width:clamp(300px,92%,var(--container));
+  margin:0 auto;
+  padding:2rem 1rem;
 }
 
-/* ------------------------------
-   Navbar
-   ------------------------------ */
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: var(--primary-color);
-  color: var(--white);
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(7,10,20,0.6), rgba(7,10,20,0.35));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text-100)}
+.brand-mark{font-size:1.25rem}
+.brand-name{font-weight:600;letter-spacing:.2px}
+
+/* Nav */
+.nav-menu{display:flex;align-items:center;gap:1rem}
+.nav-list{display:flex;gap:0.75rem;list-style:none;margin:0;padding:0}
+.nav-link{color:var(--muted);text-decoration:none;padding:.45rem .55rem;border-radius:8px;font-weight:500}
+.nav-link:hover{color:var(--text-100);background:rgba(255,255,255,0.02)}
+.nav-cta{display:inline-block;margin-left:8px}
+
+/* Mobile toggle */
+.nav-toggle{display:none;background:none;border:0;padding:8px;border-radius:8px;cursor:pointer}
+.hamburger{width:22px;height:2px;background:var(--text-100);display:block;position:relative}
+.hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--text-100);transition:transform .25s ease}
+.hamburger::before{top:-7px} .hamburger::after{top:7px}
+
+/* Hero */
+.hero{
+  padding:4rem 0 6rem;
+  background-image: radial-gradient(800px 400px at 10% 10%, rgba(109,92,230,0.12), transparent 12%),
+                    radial-gradient(600px 300px at 90% 80%, rgba(45,212,191,0.08), transparent 12%),
+                    linear-gradient(180deg, rgba(15,23,36,0.0), rgba(6,18,34,0.25));
+}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-title{font-size:clamp(1.6rem,2.6vw,2.4rem);margin:0 0 .6rem;line-height:1.05}
+.hero-sub{color:var(--muted);margin:0 0 1rem}
+.hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;padding:.6rem .95rem;border-radius:10px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn-primary{
+  background:var(--accent);
+  color:white;
+  box-shadow:0 6px 18px rgba(46,38,124,0.2), inset 0 -1px 0 rgba(0,0,0,0.08);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-ghost{
+  background:transparent;color:var(--text-100);border:1px solid rgba(255,255,255,0.06)
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
+/* Art card */
+.art-card{width:100%;max-width:360px;height:240px;border-radius:14px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:1rem}
+.art-badges{display:flex;gap:.5rem;position:absolute;left:1rem;bottom:1rem}
+.badge{background:rgba(255,255,255,0.04);padding:.35rem .6rem;border-radius:999px;font-weight:600;color:var(--muted);font-size:.80rem}
+
+/* Sections */
+.section{padding:3rem 0}
+.section-head{text-align:center;margin-bottom:1.5rem}
+.lede{color:var(--muted);margin-top:.5rem}
+
+/* Cards grid */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:12px;padding:1.25rem;box-shadow:0 8px 30px rgba(2,6,23,0.55);transition:transform .18s ease}
+.card:hover{transform:translateY(-6px)}
+.card-icon{font-size:1.75rem;margin-bottom:.6rem}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:transparent;border-radius:12px;overflow:hidden}
+.project-media{height:160px;border-radius:12px;background:linear-gradient(135deg,#6e8efb,#2dd4bf);box-shadow:inset 0 -30px 60px rgba(0,0,0,0.18);}
+
+/* About and contact layout */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.contact-grid{display:grid;grid-template-columns:1fr 380px;gap:1.25rem;align-items:start}
+.contact-form{background:var(--glass);padding:1rem;border-radius:12px}
+.contact-form label{display:block;margin-bottom:.75rem;color:var(--muted)}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:.65rem .75rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);
+  background:transparent;color:var(--text-100);
+  outline:none;resize:vertical;font-family:inherit
+}
+.contact-form input:focus, .contact-form textarea:focus{box-shadow:0 6px 20px rgba(46,38,124,0.12);border-color:rgba(255,255,255,0.06)}
+
+/* Footer */
+.site-footer{padding:2.2rem 0;margin-top:3rem;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.9));border-top:1px solid rgba(255,255,255,0.02)}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;align-items:center}
+.footer-links a{display:block;color:var(--muted);text-decoration:none;margin-bottom:.3rem}
+
+/* Utilities & responsive */
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:1.25rem}
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:1rem}
+  .footer-grid{grid-template-columns:1fr;row-gap:.75rem}
 }
 
-.navbar .logo img {
-  height: 40px;
-  width: auto;
+@media (max-width:720px){
+  .nav-menu{position:fixed;inset:64px 12px auto 12px;background:linear-gradient(180deg, rgba(6,12,30,0.95), rgba(6,12,30,0.98));padding:1rem;border-radius:12px;box-shadow:0 12px 40px rgba(1,4,10,0.6);display:none;flex-direction:column;z-index:99}
+  .nav-menu.open{display:flex}
+  .nav-list{flex-direction:column;gap:.25rem}
+  .nav-toggle{display:inline-flex}
+  .cards-grid{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr}
+  .brand-name{display:none}
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.nav-links li a:hover {
-  color: var(--secondary-color);
-}
-
-/* Mobile menu button */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: var(--white);
-  cursor: pointer;
-}
-
-/* ------------------------------
-   Hero Section
-   ------------------------------ */
-.hero {
-  background: url('https://source.unsplash.com/1600x800/?water,clean') center/cover no-repeat;
-  color: var(--white);
-  text-align: center;
-  padding: 6rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background: #e1b800;
-  color: var(--white);
-}
-
-/* ------------------------------
-   Sections
-   ------------------------------ */
-section {
-  padding: 4rem 1rem;
-}
-
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-}
-
-section p {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  text-align: center;
-  color: #555;
-}
-
-/* ------------------------------
-   Footer
-   ------------------------------ */
-footer {
-  background: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
-
-/* ------------------------------
-   Responsive Styles
-   ------------------------------ */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--primary-color);
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
+/* small helpers */
+.icon{width:20px;height:20px;fill:currentColor;vertical-align:middle}
+.form-note{color:var(--muted);margin-left:.5rem;font-size:.88rem}
