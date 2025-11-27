@@ -23,9 +23,9 @@
       <nav class="hidden md:flex items-center space-x-6">
         <a href="index.html" class="text-slate-700 hover:text-blue-600">Home</a>
         <a href="about.html" class="text-slate-700 hover:text-blue-600">About</a>
-        <a href="services.html" class="text-slate-700 hover:text-blue-600">Services</a>
-        <a href="solutions.html" class="text-slate-700 hover:text-blue-600">Solutions</a>
-        <a href="products.html" class="text-slate-700 hover:text-blue-600">Products</a>
+        <!--<a href="services.html" class="text-slate-700 hover:text-blue-600">Solar services</a>-->
+        <a href="solutions.html" class="text-slate-700 hover:text-blue-600">Water treatment</a>
+        <a href="products.html" class="text-slate-700 hover:text-blue-600">Solar services</a>
         <a href="contact.html" class="text-slate-700 hover:text-blue-600">Contact</a>
       </nav>
       <div class="md:hidden">
@@ -44,9 +44,9 @@
     <div class="px-4 py-3 space-y-2">
       <a href="index.html" class="block text-slate-700">Home</a>
       <a href="about.html" class="block text-slate-700">About</a>
-      <a href="services.html" class="block text-slate-700">Services</a>
-      <a href="solutions.html" class="block text-slate-700">Solutions</a>
-      <a href="products.html" class="block text-slate-700">Products</a>
+      <!--<a href="services.html" class="block text-slate-700">Services</a>-->
+      <a href="solutions.html" class="block text-slate-700">Water treatment</a>
+      <a href="products.html" class="block text-slate-700">Solar services</a>
       <a href="contact.html" class="block text-slate-700">Contact</a>
     </div>
   </div>
@@ -68,14 +68,14 @@ document.getElementById('menuBtn')?.addEventListener('click', function(){
 });
 </script>
 
-<main class="pt-20">
+<main class="pt-10">
 
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-b from-sky-50 via-white to-white">
     <div class="absolute inset-0 overflow-hidden -z-10">
       <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=60" alt="" class="w-full h-full object-cover opacity-60">
     </div>
-    <div class="max-w-6xl mx-auto px-4 py-28">
+    <div class="max-w-6xl mx-auto px-4 py-24">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">Innovating Water Treatment & Scaling Solutions</h1>
@@ -91,9 +91,147 @@ document.getElementById('menuBtn')?.addEventListener('click', function(){
       </div>
     </div>
   </section>
+ 
+<!-- Solar Services Section - Insert after Hero Section -->
+<section class="bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-white py-16 border-y border-amber-100">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Solar Energy Solutions</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        Expanding our commitment to sustainability, we now offer comprehensive solar energy solutions for residential, commercial, and industrial applications.
+      </p>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
+      
+      <!-- Left: Image -->
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Panels" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Right: Content -->
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Harness the Power of the Sun</h3>
+        <p class="text-slate-700 mb-6 leading-relaxed">
+          Our solar solutions combine cutting-edge technology with sustainable practices to help you reduce energy costs and carbon footprint. From design to installation and maintenance, we provide end-to-end solar energy systems tailored to your needs.
+        </p>
+        
+        <div class="space-y-4 mb-6">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Reduced Energy Bills</h4>
+              <p class="text-sm text-slate-600">Save up to 80% on electricity costs with efficient solar systems</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Government Subsidies</h4>
+              <p class="text-sm text-slate-600">Access available incentives and subsidies for solar installations</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Eco-Friendly Solution</h4>
+              <p class="text-sm text-slate-600">Reduce carbon emissions and contribute to a cleaner environment</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="solar-services.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+          Explore Solar Solutions →
+        </a>
+      </div>
+    </div>
+
+    <!-- Solar Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Service 1 -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+          <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Residential Solar</h3>
+        <p class="text-sm text-slate-600">Rooftop solar systems for homes and apartments</p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+          <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Commercial Solar</h3>
+        <p class="text-sm text-slate-600">Energy solutions for offices and businesses</p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+          <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Industrial Solar</h3>
+        <p class="text-sm text-slate-600">Large-scale solar plants for factories</p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+          <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Maintenance & AMC</h3>
+        <p class="text-sm text-slate-600">Regular servicing and annual contracts</p>
+      </div>
+
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="mt-12 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-8 text-center text-white">
+      <h3 class="text-2xl font-bold mb-3">Ready to Switch to Solar?</h3>
+      <p class="mb-6 text-amber-50">Get a free consultation and quote for your solar project today</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-300">
+          Get Free Quote
+        </a>
+        <a href="tel:+916364321990" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors duration-300">
+          Call Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- What We Do -->
-  <section class="max-w-6xl mx-auto px-2 py-0">
+  <section class="max-w-6xl mx-auto px-2 py-8">
     <h2 class="text-2xl font-bold text-blue-700 text-center">What We Do</h2>
     <p class="text-center text-slate-600 mt-2">Integrated water treatment solutions — from concept to long-term operation.</p>
     <div class="mt-8 grid gap-8 md:grid-cols-3">
@@ -403,8 +541,8 @@ document.getElementById('menuBtn')?.addEventListener('click', function(){
       <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
         <p>&copy; 2025 <span class="text-white font-medium">Scalex Global LLP</span>. All rights reserved.</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
-          <a href="#" class="hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
+          <a href="privacy&policy.html" class="hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
+          <a href="Terms of service.html" class="hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
         </div>
       </div>
     </div>
