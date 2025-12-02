@@ -107,158 +107,146 @@
   </section>
 
   <!-- Solar Applications Cards -->
-  <section class="py-6 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Solar Applications</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          Our systems are customized for diverse use-cases — select a card to view full details or request a quote.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Residential PV -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9l9-7 9 7v11a1 1 0 0 1-1 1h-4v-7H8v7H4a1 1 0 0 1-1-1V9z"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Residential PV Systems</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              Roof-top PV systems for homes to cut electricity bills and provide energy independence.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Net-metering ready</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Battery backup options</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Aesthetic mounting</span></li>
-            </ul>
-            <button onclick="openSolarDetails('residentialPV')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Commercial Rooftop -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 10v10M17 10v8M12 3v18"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Commercial Rooftop PV</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              High-yield rooftop systems for offices, warehouses and retail chains to lower operational costs.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Large-scale installations</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">O&M contracts available</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Performance guarantees</span></li>
-            </ul>
-            <button onclick="openSolarDetails('commercialPV')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Solar Water Heating -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v6M7 9h10M5 21h14a2 2 0 002-2v-3a7 7 0 00-14 0v3a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Solar Water Heating</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              Thermosiphon and pumped solar water heating systems for residences, hotels and industries.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Flat plate & evacuated tubes</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Scale-resistant designs</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Integrates with boilers</span></li>
-            </ul>
-            <button onclick="openSolarDetails('solarWaterHeating')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Solar Pumping -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v6m0 8v6M4 7h16M4 17h16"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Solar Pumping</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              Solar-driven pumps for irrigation, livestock water supply and remote water systems.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Submersible & surface pumps</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">MPPT controllers</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Off-grid capable</span></li>
-            </ul>
-            <button onclick="openSolarDetails('solarPumping')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Battery & Hybrid -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10v10H7zM12 2v3M18 5v2M6 5v2"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Battery & Hybrid Systems</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              Lithium & lead-acid storage, hybrid inverters and islanding-capable systems for resilience.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Energy storage sizing</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">BESS integrations</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Backup & peak shaving</span></li>
-            </ul>
-            <button onclick="openSolarDetails('batteryHybrid')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-        <!-- EPC / Industrial -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="h-48 bg-gradient-to-br from-gray-400 to-slate-600 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M3 17h18M6 7v10M18 7v10"/>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-900 mb-3">EPC & Industrial Scale</h3>
-            <p class="text-slate-600 mb-4 text-sm">
-              End-to-end EPC for large rooftop/ground-mount plants: engineering, procurement, construction and O&M.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Large ground-mount arrays</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Substation & grid integration</span></li>
-              <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Long-term O&M contracts</span></li>
-            </ul>
-            <button onclick="openSolarDetails('epcIndustrial')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
-              View Full Details
-            </button>
-          </div>
-        </div>
-
-      </div>
+<section class="py-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Solar Applications</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        Our systems are customized for diverse use-cases — select a card to view full details or request a quote.
+      </p>
     </div>
-  </section>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Residential PV -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Residential Solar PV" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Residential PV Systems</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            Roof-top PV systems for homes to cut electricity bills and provide energy independence.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Net-metering ready</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Battery backup options</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Aesthetic mounting</span></li>
+          </ul>
+          <button onclick="openSolarDetails('residentialPV')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Commercial Rooftop -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80" alt="Commercial Solar Rooftop" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Commercial Rooftop PV</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            High-yield rooftop systems for offices, warehouses and retail chains to lower operational costs.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Large-scale installations</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">O&M contracts available</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Performance guarantees</span></li>
+          </ul>
+          <button onclick="openSolarDetails('commercialPV')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Solar Water Heating -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80" alt="Solar Water Heating" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Solar Water Heating</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            Thermosiphon and pumped solar water heating systems for residences, hotels and industries.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Flat plate & evacuated tubes</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Scale-resistant designs</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Integrates with boilers</span></li>
+          </ul>
+          <button onclick="openSolarDetails('solarWaterHeating')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Solar Pumping -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" alt="Solar Pumping System" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Solar Pumping</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            Solar-driven pumps for irrigation, livestock water supply and remote water systems.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Submersible & surface pumps</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">MPPT controllers</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Off-grid capable</span></li>
+          </ul>
+          <button onclick="openSolarDetails('solarPumping')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Battery & Hybrid -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1620553090112-37932264bb6e?w=800&q=80" alt="Battery Storage System" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Battery & Hybrid Systems</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            Lithium & lead-acid storage, hybrid inverters and islanding-capable systems for resilience.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Energy storage sizing</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">BESS integrations</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Backup & peak shaving</span></li>
+          </ul>
+          <button onclick="openSolarDetails('batteryHybrid')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+      <!-- EPC / Industrial -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80" alt="Industrial Solar EPC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">EPC & Industrial Scale</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+            End-to-end EPC for large rooftop/ground-mount plants: engineering, procurement, construction and O&M.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Large ground-mount arrays</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Substation & grid integration</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-600">•</span><span class="text-slate-700">Long-term O&M contracts</span></li>
+          </ul>
+          <button onclick="openSolarDetails('epcIndustrial')" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- CTA -->
   <section class="py-16 bg-gradient-to-r from-amber-600 to-yellow-500">
@@ -278,9 +266,9 @@
 
 </main>
 
-<!-- Quotation Modal (same as on water page; form ID kept identical) -->
+<!-- Quotation Modal (Fixed Sizing) -->
 <div id="quotationModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl">
+  <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
     <div class="flex justify-between items-center mb-6">
       <h3 class="text-2xl font-bold text-slate-900">Request Quotation</h3>
       <button onclick="document.getElementById('quotationModal').classList.add('hidden'); document.body.style.overflow='auto';" class="text-slate-400 hover:text-slate-600">
@@ -293,41 +281,41 @@
     <form id="quotationForm" class="space-y-4">
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Application Type</label>
-        <select id="applicationType" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+        <select id="applicationType" name="application_type" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
           <option value="">Select Application</option>
-          <option>Residential PV System</option>
-          <option>Commercial Rooftop PV</option>
-          <option>Solar Water Heating</option>
-          <option>Solar Pumping</option>
-          <option>Battery & Hybrid</option>
-          <option>EPC / Industrial</option>
-          <option>Other</option>
+          <option value="Residential PV System">Residential PV System</option>
+          <option value="Commercial Rooftop PV">Commercial Rooftop PV</option>
+          <option value="Solar Water Heating">Solar Water Heating</option>
+          <option value="Solar Pumping">Solar Pumping</option>
+          <option value="Battery & Hybrid">Battery & Hybrid</option>
+          <option value="EPC / Industrial">EPC / Industrial</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Your Name *</label>
-        <input type="text" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Enter your name">
+        <input type="text" name="name" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Enter your name">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Company/Organization</label>
-        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Enter company name">
+        <input type="text" name="company" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Enter company name">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-        <input type="tel" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+        <input type="tel" name="phone" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-        <input type="email" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="your@email.com">
+        <input type="email" name="email" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="your@email.com">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Project Details</label>
-        <textarea rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Brief description of your requirements..."></textarea>
+        <textarea name="message" rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Brief description of your requirements..."></textarea>
       </div>
 
       <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300">

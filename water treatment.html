@@ -301,6 +301,35 @@
         </div>
       </div>
 
+      <!--  Industrial Desalination -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="assets/images/desalination.png" alt=" Industrial Desalination" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3"> Industrial Desalination</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+           Desalination plants produce fresh water from seawater for cities, industries, agriculture, hotels, ships, and also enable mineral extraction from brine.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Seawater or brackish water into fresh water</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Municipal supply</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Industrial use</span>
+            </li>
+          </ul>
+          <button onclick="openDetails('desalination')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -730,6 +759,38 @@ function openDetails(applicationType) {
         'Professional installation included'
       ],
       idealFor: 'Homeowners, apartment complexes, and residential developers looking to provide high-quality water while protecting expensive plumbing infrastructure and appliances.'
+    },
+    desalination: {
+      title: 'Industrial Desalination Plants',
+      icon: '🏭',
+      description: 'Desalination plants turn seawater into fresh water for cities, industries, farms, hotels, ships, and mineral recovery.',
+      fullDescription: 'Large-scale desalination systems designed to convert seawater or brackish water into fresh, usable water for municipal, industrial, agricultural, and commercial applications.',
+      applications: [
+        'Municipal drinking water supply',
+        'Industrial process water for power plants, refineries & chemical industries',
+        'Agricultural irrigation in water-scarce regions',
+        'Marine vessels, ships & offshore platforms',
+        'Aquaculture & controlled marine farming',
+        'Mineral extraction from concentrated brine'
+      ],
+      benefits: [
+        'Reliable fresh water supply in drought-prone or coastal regions',
+        'Produces high-purity water for industrial operations',
+        'Supports sustainable agriculture in arid zones',
+        'Reduces dependency on groundwater sources',
+        'Supports marine & offshore facilities with onboard fresh water',
+        'Enables water availability for tourism & commercial facilities'
+      ],
+      technicalSpecs: [
+        'Works with seawater & high-TDS brackish water',
+        'Multi-stage treatment (RO, UF, pre-treatment filtration)',
+        'Scalable capacity from 5,000 LPD to multi-million LPD',
+        'Energy-efficient and optimized for industrial duty cycles',
+        'Corrosion-resistant marine-grade components',
+        'Professional installation included'
+      ],
+      idealFor: 'Municipal corporations, industrial plants, coastal communities, commercial establishments, agricultural developers, marine vessels, and offshore platforms requiring consistent, high-quality fresh water supply from seawater or brackish sources.'
+
     }
   };
   
