@@ -330,6 +330,67 @@
           </button>
         </div>
       </div>
+
+<!--  Electrolytic ETP -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="assets/images/ETP.png" alt="Electrolytic ETP" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3"> Electrolytic ETP</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+           Advanced industrial effluent treatment system using electrochemical processes to remove oils, grease, chemicals, and heavy-metal pollutants from wastewater.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Remove oils, grease, chemicals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Heavy-metal pollutants from wastewater.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Industrial use</span>
+            </li>
+          </ul>
+          <button onclick="openDetails('Electrolytic')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
+<!--  Electrolytic STP-->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="h-48 overflow-hidden">
+          <img src="assets/images/STP.png" alt="Electrolytic STP" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900 mb-3"> Electrolytic STP</h3>
+          <p class="text-slate-600 mb-4 text-sm">
+          Electrochemical sewage treatment system designed to purify domestic wastewater from homes, offices, apartments, and hospitals with higher efficiency and less chemical use.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Residential apartments & gated communities</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Municipal domestic sewage treatment.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span class="text-slate-700">Hospitals & medical facilities.</span>
+            </li>
+          </ul>
+          <button onclick="openDetails('STP')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition-colors duration-300">
+            View Full Details
+          </button>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -791,7 +852,70 @@ function openDetails(applicationType) {
       ],
       idealFor: 'Municipal corporations, industrial plants, coastal communities, commercial establishments, agricultural developers, marine vessels, and offshore platforms requiring consistent, high-quality fresh water supply from seawater or brackish sources.'
 
+    },
+    Electrolytic: {
+      title: 'Electrolytic ETP',
+      icon: '🏭',
+      description: 'Advanced industrial effluent treatment system using electrochemical processes to remove oils, grease, chemicals, and heavy-metal pollutants from wastewater.',
+      fullDescription: 'Electrolytic ETP (Effluent Treatment Plant) uses electrocoagulation, electro-oxidation, and electro-flotation technologies to purify industrial wastewater. These processes efficiently break down contaminants, separate suspended solids, neutralize pollutants, and produce cleaner, reusable water with minimal chemical usage.',
+      applications: [
+         'Textile & dyeing industries',
+         'Chemical & pharmaceutical factories',
+         'Oil & grease–laden industrial wastewater',
+         'Metal plating & electroplating units',
+         'Food processing & slaughterhouse wastewater',
+         'Automotive & machining industries'
+      ],
+      benefits: [
+        'Reduces oils, grease, dyes, heavy metals & toxic chemicals',
+        'Works with minimal or zero chemical dosing',
+        'Produces cleaner water than conventional ETPs',
+        'Lower sludge production compared to chemical treatment',
+        'Smaller footprint & modular installation',
+        'Energy-efficient and easy to automate'
+      ],
+      technicalSpecs: [
+        'Utilizes electrocoagulation, electro-oxidation & electro-flotation',
+        'Automatic electrode cleaning options available',
+        'Corrosion-resistant electrodes (Fe / Al)',
+        'Flow capacity: 1 KLD to 500+ KLD',
+        'Customizable based on effluent characteristics',
+        'Professional installation included'
+      ],
+      idealFor: 'Industries requiring effective removal of oils, dyes, metals, chemical pollutants, and suspended solids while reducing chemical usage, sludge generation, and operational costs—especially textiles, chemicals, pharmaceuticals, food processing, and metal treatment facilities.'
+    },
+
+    STP: {
+      title: 'Electrolytic STP',
+      icon: '🏭',
+      description: 'Electrochemical sewage treatment system designed to purify domestic wastewater from homes, offices, apartments, and hospitals with higher efficiency and less chemical use.',
+      fullDescription: 'Electrolytic Sewage Treatment Plants (STPs) use advanced electrocoagulation and electro-oxidation technologies to treat domestic wastewater. These systems enhance or replace traditional biological treatment methods by removing organic pollutants, reducing odors, eliminating pathogens, and improving overall water quality with minimal chemicals. They offer a more sustainable, compact, and efficient alternative to conventional STPs.',
+      applications: [
+         'Residential apartments & gated communities',
+         'Commercial buildings and corporate offices',
+         'Hospitals & medical facilities',
+         'Hotels, resorts & hostels',
+         'Educational institutions',
+         'Municipal domestic sewage treatment'
+      ],
+      benefits: [
+        'High removal efficiency for organic waste, color, odor & pathogens',
+        'Reduces dependency on biological processes',
+        'Produces clearer and reusable treated water',
+        'Lower sludge production compared to conventional STPs',
+        'Compact design, ideal for space-constrained facilities',
+        'Energy-efficient and easy to automate'
+      ],
+      technicalSpecs: [
+        'Electrocoagulation to remove suspended solids & organic matter',
+        'Electro-oxidation for pathogen destruction and odor control',
+        'Optional electro-flotation for solid separation',
+        'Modular & scalable from 1 KLD to large capacities' 
+      ],
+      idealFor: 'Residential societies, commercial facilities, hospitals, hotels, and institutions that need efficient, eco-friendly sewage treatment with reduced chemical use and improved water purity.'
+
     }
+
   };
   
   const data = applicationData[applicationType];
