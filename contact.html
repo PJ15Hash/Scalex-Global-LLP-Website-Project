@@ -89,12 +89,38 @@ document.getElementById('menuBtn')?.addEventListener('click', function(){
         </div>
       </div>
       <div>
-        <form action="https://formspree.io/f/mrbnkwzl" method="POST" enctype="text/plain" class="space-y-4">
-          <input type="text" name="name" placeholder="Your Name" class="w-full border p-3 rounded" required>
-          <input type="email" name="email" placeholder="Your Email" class="w-full border p-3 rounded" required>
-          <textarea name="message" rows="6" placeholder="Your Message" class="w-full border p-3 rounded" required></textarea>
-          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded">Open Email App</button>
-        </form>
+          <!-- Form Submission -->
+        <form id="contactForm" class="space-y-4">
+  <input type="text" name="name" required placeholder="Your Name" class="w-full border p-3 rounded">
+  <input type="email" name="_replyto" required placeholder="Your Email" class="w-full border p-3 rounded">
+  <textarea name="message" required rows="6" placeholder="Your Message" class="w-full border p-3 rounded"></textarea>
+  <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded">Submit</button>
+</form>
+
+<div id="msg" class="text-green-600 mt-2 hidden">Message sent successfully!</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('msg');
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    await fetch("https://formspree.io/f/mrbnkwzl", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    form.reset();
+    msg.classList.remove("hidden");
+  });
+</script>
+
+
+
       </div>
     </div>
   </section>

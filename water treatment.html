@@ -426,10 +426,10 @@
       </button>
     </div>
     
-    <form id="quotationForm" class="space-y-4">
+    <form id="quotationForm" action="https://formspree.io/f/mrbnlgbk" method="POST" class="space-y-4">
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Application Type</label>
-        <select id="applicationType" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <select name="application_type" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
           <option value="">Select Application</option>
           <option value="Swimming Pool System">Swimming Pool System</option>
           <option value="Cooling Tower System">Cooling Tower System</option>
@@ -437,39 +437,44 @@
           <option value="Hotel Water System">Hotel Water System</option>
           <option value="Industrial Water System">Industrial Water System</option>
           <option value="Residential Water System">Residential Water System</option>
+          <option value="Industrial Desalination">Industrial Desalination</option>
+          <option value="Electrolytic ETP">Electrolytic ETP</option>
+          <option value="Electrolytic STP">Electrolytic STP</option>
           <option value="Other">Other</option>
         </select>
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Your Name *</label>
-        <input type="text" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name">
+        <input type="text" name="name" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Company/Organization</label>
-        <input type="text" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter company name">
+        <input type="text" name="company" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter company name">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-        <input type="tel" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+        <input type="tel" name="phone" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-        <input type="email" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+        <input type="email" name="email" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
       </div>
 
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-2">Project Details</label>
-        <textarea rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Brief description of your requirements..."></textarea>
+        <textarea name="project_details" rows="3" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Brief description of your requirements..."></textarea>
       </div>
 
       <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
         Submit Request
       </button>
     </form>
+  </div>
+</div>
   </div>
 </div>
 
@@ -1009,44 +1014,90 @@ function closeDetailsModal() {
   }
 }
 
-// Form submission
+// Form submission with Formspree
 document.getElementById('quotationForm')?.addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // Get form button
-  const submitBtn = this.querySelector('button[type="submit"]');
+  const form = this;
+  const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.innerHTML;
   
   // Show loading state
   submitBtn.innerHTML = 'Submitting...';
   submitBtn.disabled = true;
   
-  // Simulate form submission (replace with actual API call)
-  setTimeout(() => {
-    // Show success message
-    submitBtn.innerHTML = '✓ Submitted Successfully!';
+  // Get form data
+  const formData = new FormData(form);
+  
+  // Submit to Formspree
+  fetch('https://formspree.io/f/mrbnlgbk', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show success message
+      submitBtn.innerHTML = '✓ Submitted Successfully!';
+      submitBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+      submitBtn.classList.add('bg-green-600');
+      
+      // Reset form
+      form.reset();
+      
+      // Show success notification
+      showSuccessMessage();
+      
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('bg-green-600');
+        submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+      }, 3000);
+    } else {
+      throw new Error('Form submission failed');
+    }
+  })
+  .catch(error => {
+    submitBtn.innerHTML = 'Error! Try again';
     submitBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-    submitBtn.classList.add('bg-green-600');
+    submitBtn.classList.add('bg-red-600');
     
-    // Reset form
-    this.reset();
-    
-    // Close modal and reset button after 2 seconds
     setTimeout(() => {
-      document.getElementById('quotationModal').classList.add('hidden');
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
-      submitBtn.classList.remove('bg-green-600');
+      submitBtn.classList.remove('bg-red-600');
       submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-    }, 2000);
-  }, 1000);
+    }, 3000);
+  });
 });
-document.getElementById('quotationForm')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you! We will contact you shortly with a quotation.');
-  document.getElementById('quotationModal').classList.add('hidden');
-  this.reset();
-});
+
+// Show success notification
+function showSuccessMessage() {
+  const notification = document.createElement('div');
+  notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-[9999] animate-pulse';
+  notification.innerHTML = `
+    <div class="flex items-center gap-3">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <div>
+        <p class="font-semibold">Success!</p>
+        <p class="text-sm">Your quotation request has been submitted. We'll contact you soon.</p>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Remove notification after 5 seconds
+  setTimeout(() => {
+    notification.remove();
+  }, 5000);
+}
 
 // Close modal on outside click
 document.getElementById('quotationModal')?.addEventListener('click', function(e) {
